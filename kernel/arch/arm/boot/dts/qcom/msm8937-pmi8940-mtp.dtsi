@@ -1,0 +1,95 @@
+/*
+ * Copyright (c) 2016, The Linux Foundation. All rights reserved.
+ *
+ * This program is free software; you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License version 2 and
+ * only version 2 as published by the Free Software Foundation.
+ *
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ */
+
+//#include "msm-pmi8940.dtsi"
+#include "msm8937-mtp.dtsi"
+#include "msm8937-audio-mtp.dtsi"
+/*&spmi_bus {
+	qcom,pmi8940@2 {
+		qcom,leds@a100 {
+			status = "okay";		
+			qcom,led_mpp_2 {
+				label = "mpp";
+				linux,name = "button-backlight";
+				linux,default-trigger = "none";
+				qcom,default-state = "off";
+				qcom,max-current = <40>;
+				qcom,current-setting = <5>;
+				qcom,id = <6>;
+				qcom,mode = "manual";
+				qcom,source-sel = <1>;
+				qcom,mode-ctrl = <0x60>;			
+			};
+		};	
+	};
+};*/
+&soc {
+
+};
+
+/{
+	mtp_batterydata: qcom,battery-data {
+		qcom,batt-id-range-pct = <15>;
+		#include "batterydata-2530695_coslight_2770mAh.dtsi"
+	};
+};
+
+//&pmi8940_fg {
+//	qcom,battery-data = <&mtp_batterydata>;
+//};
+
+//&pmi8940_charger {
+//	qcom,battery-data = <&mtp_batterydata>;
+//	/* qcom,chg-led-sw-controls; */
+//	/* qcom,chg-led-support; */
+//};
+
+/*&mdss_dsi0 {
+	//lab-supply = <&lab_regulator>;
+	//ibb-supply = <&ibb_regulator>;
+};
+
+&mdss_dsi1 {
+	//lab-supply = <&lab_regulator>;
+	//ibb-supply = <&ibb_regulator>;
+};
+
+&labibb {
+	status = "ok";
+	qpnp,qpnp-labibb-mode = "lcd";
+};
+
+&ibb_regulator {
+	qcom,qpnp-ibb-discharge-resistor = <32>;
+};
+
+&dsi_panel_pwr_supply {
+	qcom,panel-supply-entry@2 {
+		reg = <2>;
+		qcom,supply-name = "lab";
+		qcom,supply-min-voltage = <4600000>;
+		qcom,supply-max-voltage = <6000000>;
+		qcom,supply-enable-load = <100000>;
+		qcom,supply-disable-load = <100>;
+	};
+
+	qcom,panel-supply-entry@3 {
+		reg = <3>;
+		qcom,supply-name = "ibb";
+		qcom,supply-min-voltage = <4600000>;
+		qcom,supply-max-voltage = <6000000>;
+		qcom,supply-enable-load = <100000>;
+		qcom,supply-disable-load = <100>;
+		qcom,supply-post-on-sleep = <20>;
+	};
+};*/

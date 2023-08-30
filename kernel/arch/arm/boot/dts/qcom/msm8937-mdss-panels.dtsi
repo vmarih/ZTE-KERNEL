@@ -1,0 +1,64 @@
+/* Copyright (c) 2015-2016, The Linux Foundation. All rights reserved.
+ *
+ * This program is free software; you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License version 2 and
+ * only version 2 as published by the Free Software Foundation.
+ *
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ */
+
+#include "dsi-panel-sim-video.dtsi"
+#include "dsi-panel-sim-cmd.dtsi"
+#include "dsi-panel-truly-1080p-video.dtsi"
+#include "dsi-panel-truly-1080p-cmd.dtsi"
+#include "dsi-panel-r69006-1080p-cmd.dtsi"
+#include "dsi-panel-r69006-1080p-video.dtsi"
+#include "dsi-panel-hx8394f-720p-video.dtsi"
+#include "dsi-adv7533-1080p.dtsi"
+#include "dsi-adv7533-720p.dtsi"
+#include "dsi-panel-truly-720p-video.dtsi"
+#include "dsi-panel-truly-wuxga-video.dtsi"
+#include "dsi-panel-truly-720p-cmd.dtsi"
+#include "dsi-panel-hx8394f-jdf-720p-video.dtsi" //add by yujianhua
+#include "dsi-panel-nt35521-dijing-720p-video.dtsi"//add by yujianhua
+#include "dsi-panel-lead-fl10802-fwvga-video.dtsi"
+#include "dsi-panel-hx8399c-lead-1080p-video.dtsi" //add by zhanglian for V8
+#include "dsi-panel-otm1911a-1080p-video.dtsi" //add by dingxuehua for V8
+#include "dsi-panel-td4300-boe-1080p-video.dtsi" //add by dingxuehua for P840T80 & P840V70
+#include "dsi-panel-td4310-tianma-1080p-video.dtsi" //add by dingxuehua for P840T80 & P840V70
+#include "dsi-panel-ili9881c-skyworth-720p-video.dtsi" //add by dingxuehua for P840F01
+#include "dsi-panel-ft8716-tianma-1080p-video.dtsi" //add by yujianhua for P840V80
+#include "dsi-panel-ili9881c-holitech-720p-video.dtsi" //add by dingxuehua for P817E53
+#include "dsi-panel-td4300v80-boe-1080p-video.dtsi" //add by yujianhua for P840V80
+#include "dsi-panel-ili9881c-lcetron-720p-video.dtsi" //add by yujianhua for P840F01
+#include "dsi-panel-ili9881c-hotechrevert-720p-video.dtsi"
+#include "dsi-panel-ili9881c-liansirevert-720p-video.dtsi"
+
+&soc {
+	dsi_panel_pwr_supply: dsi_panel_pwr_supply {
+		#address-cells = <1>;
+		#size-cells = <0>;
+
+		qcom,panel-supply-entry@0 {
+			reg = <0>;
+			qcom,supply-name = "vdd";
+			qcom,supply-min-voltage = <2850000>;
+			qcom,supply-max-voltage = <2850000>;
+			qcom,supply-enable-load = <100000>;
+			qcom,supply-disable-load = <100>;
+		};
+
+		qcom,panel-supply-entry@1 {
+			reg = <1>;
+			qcom,supply-name = "vddio";
+			qcom,supply-min-voltage = <1800000>;
+			qcom,supply-max-voltage = <1800000>;
+			qcom,supply-enable-load = <100000>;
+			qcom,supply-disable-load = <100>;
+		};
+
+	};
+};

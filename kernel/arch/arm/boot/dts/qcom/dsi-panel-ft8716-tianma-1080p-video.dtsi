@@ -1,0 +1,177 @@
+/* Copyright (c) 2015-2016, The Linux Foundation. All rights reserved.
+ *
+ * This program is free software; you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License version 2 and
+ * only version 2 as published by the Free Software Foundation.
+ *
+ * This program is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ */
+
+&mdss_mdp {
+	dsi_ft8716_tianma_1080p_video: qcom,mdss_dsi_ft8716_tianma_1080p_video {
+		qcom,mdss-dsi-panel-name = "ft8716 tianma 1080p video mode dsi panel";
+		zte,lcd-proc-panel-name ="zteTianMa(ft8716)_1080*1920-5.2Inch";
+		qcom,cont-splash-enabled;
+		qcom,mdss-dsi-panel-controller = <&mdss_dsi0>;
+		qcom,mdss-dsi-panel-type = "dsi_video_mode";
+		qcom,mdss-dsi-panel-destination = "display_1";
+		qcom,mdss-dsi-panel-framerate = <60>;
+		qcom,mdss-dsi-virtual-channel-id = <0>;
+		qcom,mdss-dsi-stream = <0>;
+		qcom,mdss-dsi-panel-width = <1080>;
+		qcom,mdss-dsi-panel-height = <1920>;
+		qcom,mdss-dsi-h-front-porch = <34>;
+		qcom,mdss-dsi-h-back-porch = <34>;
+		qcom,mdss-dsi-h-pulse-width = <4>;
+		qcom,mdss-dsi-h-sync-skew = <0>;
+		qcom,mdss-dsi-v-front-porch = <16>;
+		qcom,mdss-dsi-v-back-porch = <16>;
+		qcom,mdss-dsi-v-pulse-width = <2>;
+		qcom,mdss-dsi-h-left-border = <0>;
+		qcom,mdss-dsi-h-right-border = <0>;
+		qcom,mdss-dsi-v-top-border = <0>;
+		qcom,mdss-dsi-v-bottom-border = <0>;
+		qcom,mdss-dsi-bpp = <24>;
+		qcom,mdss-dsi-underflow-color = <0xff>;
+		qcom,mdss-dsi-border-color = <0>;
+
+		qcom,mdss-dsi-on-command = [
+05 01 00 00 78 00 02 11 00
+       
+29 01 00 00 00 00 02 00 00
+29 01 00 00 00 00 04 FF 87 16 01
+29 01 00 00 00 00 02 00 80
+29 01 00 00 00 00 03 FF 87 16
+
+29 01 00 00 00 00 02 00 81
+29 01 00 00 00 00 0A CA e5 ff cc ff b2 ff 00 00 00
+29 01 00 00 00 00 02 00 00
+29 01 00 00 00 00 02 C6 10
+//CABC G 1
+29 01 00 00 00 00 02 00 00
+29 01 00 00 00 00 13 C7 a0 ac bb 9c db ac aa bb cb cc cb bb 8a 67 45 23 11 11
+29 01 00 00 00 00 02 00 00
+29 01 00 00 00 00 02 C6 11
+//CABC G 2
+29 01 00 00 00 00 02 00 00
+29 01 00 00 00 00 13 C7 a0 ab bb 9b da bb a9 bb ba cc bb ab 8a 67 45 23 11 11
+29 01 00 00 00 00 02 00 00
+29 01 00 00 00 00 02 C6 12
+//CABC G 3
+29 01 00 00 00 00 02 00 00
+29 01 00 00 00 00 13 C7 a0 aa ab 8c da ab a9 ba ba bb cb 9a 8b 67 45 23 11 11
+29 01 00 00 00 00 02 00 00
+29 01 00 00 00 00 02 C6 13
+//CABC G 4
+29 01 00 00 00 00 02 00 00
+29 01 00 00 00 00 13 C7 90 9b ab 8b ca bb 98 ba aa ba bc aa 89 67 45 23 11 11
+29 01 00 00 00 00 02 00 00
+29 01 00 00 00 00 02 C6 14
+//CABC G 5
+29 01 00 00 00 00 02 00 00
+29 01 00 00 00 00 13 C7 90 8b 9b 8c b9 bb 98 aa aa ba bb 9a 89 78 56 23 11 11
+29 01 00 00 00 00 02 00 00
+29 01 00 00 00 00 02 C6 15
+//CABC G 6
+29 01 00 00 00 00 02 00 00
+29 01 00 00 00 00 13 C7 90 9a 9a 9b c8 ba 98 a9 aa a9 cb 99 89 78 56 34 22 12
+29 01 00 00 00 00 02 00 00
+29 01 00 00 00 00 02 C6 16
+//CABC G 7
+29 01 00 00 00 00 02 00 00
+29 01 00 00 00 00 13 C7 90 8a 8b 8b b9 aa 98 a9 9a a9 ca 8a 89 88 67 35 22 22
+29 01 00 00 00 00 02 00 00
+29 01 00 00 00 00 02 C6 17
+//CABC G 8
+29 01 00 00 00 00 02 00 00
+29 01 00 00 00 00 13 C7 90 99 9a 8a a9 aa 98 99 b9 98 bb 8a 89 88 67 45 33 23
+29 01 00 00 00 00 02 00 00
+29 01 00 00 00 00 02 C6 18
+//CABC G 9
+29 01 00 00 00 00 02 00 00
+29 01 00 00 00 00 13 C7 90 99 99 8a a8 aa 98 a8 99 99 aa 8b 89 88 78 46 33 33
+29 01 00 00 00 00 02 00 00
+29 01 00 00 00 00 02 C6 19
+//CABC G 10
+29 01 00 00 00 00 02 00 00
+29 01 00 00 00 00 13 C7 80 8a 99 8a a8 a9 89 89 9a 98 b9 9a 87 88 78 56 44 44
+29 01 00 00 00 00 02 00 00
+29 01 00 00 00 00 02 C6 1a
+//CABC G 11
+29 01 00 00 00 00 02 00 00
+29 01 00 00 00 00 13 C7 80 99 89 8a 98 a9 98 98 99 89 a9 a9 88 88 88 67 44 44
+29 01 00 00 00 00 02 00 00
+29 01 00 00 00 00 02 C6 1b
+//CABC G 12
+29 01 00 00 00 00 02 00 00
+29 01 00 00 00 00 13 C7 80 89 99 89 98 99 89 98 89 89 a9 99 88 88 88 67 55 55
+29 01 00 00 00 00 02 00 00
+29 01 00 00 00 00 02 C6 1c
+//CABC G 13
+29 01 00 00 00 00 02 00 00
+29 01 00 00 00 00 13 C7 80 98 98 89 98 99 88 98 98 89 a8 99 88 88 88 78 56 55
+29 01 00 00 00 00 02 00 00
+29 01 00 00 00 00 02 C6 1d
+//CABC G 14
+29 01 00 00 00 00 02 00 00
+29 01 00 00 00 00 13 C7 80 88 89 89 88 99 88 98 98 88 98 99 89 88 88 78 66 66
+29 01 00 00 00 00 02 00 00
+29 01 00 00 00 00 02 C6 1e
+//CABC G 15
+29 01 00 00 00 00 02 00 00
+29 01 00 00 00 00 13 C7 80 88 98 88 88 89 89 88 98 88 98 88 89 88 88 88 77 67
+29 01 00 00 00 00 02 00 00
+29 01 00 00 00 00 02 C6 1f
+//CABC G 16
+29 01 00 00 00 00 02 00 00
+29 01 00 00 00 00 13 C7 80 88 88 88 88 89 88 88 88 88 98 98 87 88 88 88 88 78
+29 01 00 00 00 00 02 00 00
+29 01 00 00 00 00 02 C6 00
+// Auto Select Curve
+29 01 00 00 00 00 02 51 00
+29 01 00 00 01 00 02 53 24
+29 01 00 00 00 00 02 55 01
+//CABC Moving mode
+			05 01 00 00 14 00 02 29 00
+    
+		];
+		qcom,mdss-dsi-off-command = [
+			05 01 00 00 14 00 02 28 00
+			05 01 00 00 78 00 02 10 00
+		];
+		qcom,mdss-dsi-on-command-state = "dsi_lp_mode";
+		qcom,mdss-dsi-off-command-state = "dsi_hs_mode";
+		qcom,mdss-dsi-lp11-init;
+        qcom,mdss-dsi-h-sync-pulse = <0>;
+		qcom,mdss-dsi-traffic-mode = "burst_mode";
+		qcom,mdss-dsi-bllp-eof-power-mode;
+		qcom,mdss-dsi-bllp-power-mode;
+		qcom,mdss-dsi-lane-0-state;
+		qcom,mdss-dsi-lane-1-state;
+		qcom,mdss-dsi-lane-2-state;
+		qcom,mdss-dsi-lane-3-state;
+		qcom,mdss-dsi-panel-timings = [D6 32 22 00 60 66 26 36 28 03 04 00];
+		qcom,mdss-dsi-t-clk-post = <0x03>;
+		qcom,mdss-dsi-t-clk-pre = <0x28>;
+		qcom,mdss-dsi-bl-min-level = <1>;
+		qcom,mdss-dsi-bl-max-level = <255>;
+		qcom,mdss-dsi-dma-trigger = "trigger_sw";
+		qcom,mdss-dsi-mdp-trigger = "none";
+		qcom,mdss-dsi-bl-pmic-control-type = "bl_ctrl_dcs_wled";
+		qcom,mdss-dsi-reset-sequence = <1 10>, <0 10>, <1 10>;
+		qcom,mdss-dsi-post-init-delay = <1>;
+/*		qcom,mdss-dsi-panel-status-check-mode = "reg_read";
+		qcom,mdss-dsi-panel-status-command = [06 01 00 01 05 00 02 0A 00];
+		qcom,mdss-dsi-panel-status-command-state = "dsi_lp_mode";
+		qcom,mdss-dsi-panel-status-read-length = <1>;
+		qcom,mdss-dsi-panel-status-value =<0x9C>;
+		qcom,mdss-dsi-tx-eot-append;
+		qcom,esd-check-enabled;*/
+		qcom,mdss-pan-physical-width-dimension = <64>;
+		qcom,mdss-pan-physical-height-dimension = <115>;
+		//zte,panel-reset-early-enabled;
+	};
+};

@@ -1,0 +1,7 @@
+config FINGERPRINT_GF3238
+	tristate "GOODIX fingerprint driver"
+	default n
+	
+config FINGERPRINT_GF3238_NAV
+	tristate "GOODIX fingerprint driver NAV"
+	default n
